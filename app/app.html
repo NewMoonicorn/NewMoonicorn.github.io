@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./css/app.min.css" rel="stylesheet" />
+  <title>Moonicorn</title>
+  <link rel="icon" href="./Images/Moon.png" type="image/png" />
+</head>
+
+<body>
+  <!--Main Navigation-->
+  <header id="home">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><img src="./Images/logo.png" width="150px" alt="Logo" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto d-flex align-items-md-center">
+            <li class="nav-item">
+              <a class="nav-link" href="https://t.me/moonicorns"><i class="fab fa-telegram fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/Moonicornation"><i class="fab fa-twitter fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://discord.gg/ScQhXQ3XM8"><i class="fab fa-discord fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn text-dark font-weight-bold btn-wallet" target="_blank" id="button">
+                Connect Wallet
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--/.Navbar-->
+  </header>
+  <!--Main Navigation-->
+
+  <main class="main-body">
+    <section class="mask">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-sm-6 d-flex justify-content-center flex-column mx-auto">
+            <h1>A new way to earn BNB</h1>
+            <div class="card mt-3">
+              <div class="card-body text-center">
+                <h5 class="card-title">Your micorn Balance</h5>
+                <!-- <p class="card-text text-white">micorn 0.00</p> -->
+                <p>micorn <span id="user-balance">?</span></p>
+                <p class="card-text text-white">0.00 $</p>
+              </div>
+            </div>
+            <div class="container-button mt-5 mx-auto d-flex justify-content-center">
+              <a href="https://legacy.quickswap.exchange/#/swap?outputCurrency=0x9dc1FcB26ba3781407Cc2e7b0B9370f560CEd487#/" class="btn button-buy"><i class="fa fa-shopping-cart fa-lg mr-2"></i> Buy micorn</a>
+            </div>
+            <img src="./Images/Animation-Transparent.gif" width="400px" class="mx-auto" />
+          </div>
+          <!-- <div class="col-sm-6">
+            
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="rewardSection">
+      <div class="container fluid">
+        <div class="row mt-5 mx-auto d-flex justify-content-center">
+          <div class="col-sm-12 mb-md-0">
+            <div class="card reward">
+              <div class="card-body text-center">
+                <p>My reward: <span id="user-divs">?</span></p>
+                <p>
+                  "Pool is always changing based on buys, sells and collects
+                  by others, learn more here"
+                </p>
+                
+                <p>Next reward is <span id="user-next">?</span></p>
+                <div class="container-button mt-5 mx-auto d-flex justify-content-center">
+                  <!-- <a href="" class="btn button-reward" ><i class="fa fa-trophy fa-lg mr-3" onclick="claimReward1()" aria-hidden="true"></i>
+                    Claim My Reward</a> -->
+
+                    <button class="btn button-reward" onclick="claimReward1()" ><i class="fa fa-trophy fa-lg mr-3" onclick="claimReward1()" aria-hidden="true"></i>
+                      Claim My Reward</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rewardSection py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="col-sm-12 mb-5 mb-md-0">
+              <div class="card reward">
+                <div class="card-body text-center">
+                  <p>Max Transaction Amount</p>
+                  <p>micorn 100,000,000,000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-5">
+            <div class="col-sm-12 mb-md-0">
+              <div class="card reward">
+                <div class="card-body text-center">
+                  <p>Total Liquidity Pool</p>
+                  <p>Under development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="col-sm-12 mb-5 mb-md-0">
+              <div class="card reward">
+                <div class="card-body text-center">
+                  <p>Total BNB in Liquidity Pool</p>
+                  <p>Under development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="col-sm-12 mb-5 mb-md-0">
+              <div class="card reward">
+                <div class="card-body text-center">
+                  <p>Current 1 mil micorn Price</p>
+                  <p>Under development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      <a href="#!">© 2022 – Moonicorn</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+			<!-- scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/interface.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/web3.min.js"></script>
+			<script src="assets/js/main_eth.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
+<script>
+/* To connect using MetaMask */
+
+window.onload = document.getElementById('button'); {
+  let account;
+
+      ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
+      accountText = accounts[0];
+      accountSub1 =  accountText.substring(0, 5);
+      accountSub2 =  accountText.substring(38, 42);
+      account = accounts[0];
+      button.textContent = accountSub1 + "......" + accountSub2;
+      console.log(account);
+  });
+}
+
+document.getElementById('button').addEventListener('click', event => {
+      let account;
+      let button = event.target;
+      ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
+      accountText = accounts[0];
+      accountSub1 =  accountText.substring(0, 5);
+      accountSub2 =  accountText.substring(38, 42);
+      account = accounts[0];
+      button.textContent = accountSub1 + "......" + accountSub2;
+      console.log(account);
+  });
+});
+
+
+
+</script>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</body>
+
+</html>

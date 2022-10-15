@@ -1,0 +1,185 @@
+$primary-color: #200627;
+$secondary-color: #1e0e22;
+$third-color: #f38aa8;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+  background: url('../Images/1.png') no-repeat right center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: $secondary-color;
+  box-shadow: none;
+  .moonicorn-logo {
+    width: 200px;
+  }
+  ul {
+    list-style: none;
+  }
+  .nav-item {
+    .btn-wallet {
+      background-color: $third-color;
+      border: 1px solid $primary-color;
+    }
+  }
+}
+
+.mask {
+  h1 {
+    color: $third-color;
+    font-weight: 800;
+    font-size: 50px;
+  }
+  .card {
+    background-color: $secondary-color;
+    color: white;
+    border: 1px solid $third-color;
+    border-radius: 20px;
+  }
+  .container-button {
+    .btn {
+      text-transform: uppercase;
+      &:hover {
+        background-color: $secondary-color;
+        color: white;
+      }
+    }
+    .button-buy {
+      background-color: $third-color;
+      color: black;
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+    .main-body {
+      background: url('../Images/1_Mobile.png') no-repeat center;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+  .mask {
+    h1 {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 44px !important;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .navbar {
+      .moonicorn-logo {
+        width: 100px;
+      }
+      
+      .btn-wallet {
+        width: 150px;
+        font-size: 9px;
+      }
+    }
+  }
+}
+
+.top-nav-collapse {
+  background-color: $secondary-color;
+}
+@media (max-width: 768px) {
+  .navbar:not(.top-nav-collapse) {
+    background-color: $secondary-color;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background-color: $secondary-color;
+  }
+}
+
+main {
+  .rewardSection {
+    .reward {
+      background-color: $secondary-color;
+      color: white;
+      border: 1px solid $third-color;
+      border-radius: 20px;
+      .card-body {
+        .vl {
+          border-left: 3px solid grey;
+          height: 200px;
+        }
+        .v2 {
+          border-left: 3px solid grey;
+          height: 80px;
+        }
+        .value {
+          font-size: 30px;
+        }
+        .head {
+          font-size: 18px;
+        }
+        .button-reward {
+          background-color: $primary-color;
+          color: white;
+          border-radius: 20px;
+          border: 1px solid white;
+        }
+        img {
+          width: 80px;
+        }
+        #icon-1 {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+  @media (max-width: 786px) {
+    
+    .rewardSection {
+      .head {
+        font-size: 8px;
+      }
+      .reward-img {
+        margin-left: -10px;
+      }
+      .bnbValue {
+        font-size: 10px;
+      }
+      .card-body {
+        .button-reward {
+          background-color: $primary-color;
+          color: white;
+          font-size: 10px;
+
+          border-radius: 20px;
+          border: 1px solid white;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: $secondary-color;
+  color: white;
+  a {
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
